@@ -1,12 +1,12 @@
 ##Connect Promise + async Await
 
-    ``` Async Await
+```  !Async Await
     const getUser = await fetch('https://api.github.com/users/anonystick')
     const data = await getUser.json();
     console.log(data);
 ```
 
-    ```Connect 
+``` !Connect 
     const getUser = await fetch('https://api.github.com/users/anonystick').then(data => data.json())
     console.log(getUser)
 ```
@@ -14,17 +14,17 @@
 ###Kết hợp async / await với Promise.catch
 
 ```
-    ##Normal
+    !Normal
     let data;
     try {
-    data = await fetchData();
+        data = await fetchData();
     } catch (error) {
-    console.error(error);
+        console.error(error);
     }
-
     // Now we can use `data` 😎
     console.log(data);
-    ##Different
+
+    !Different
     const data = await fetchData()
     .catch(error => {
         console.error(error);
