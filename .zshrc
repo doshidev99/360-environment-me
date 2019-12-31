@@ -1,5 +1,6 @@
 export ZSH="/Users/truong.doshi/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="spaceship"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
@@ -7,11 +8,12 @@ source $ZSH/oh-my-zsh.sh
 alias nps="npm start"
 alias npd="npm run dev"
 alias gd="gulp dev"
+alias ys="yarn start"
 alias ntdev="npm run dev-android"
 alias ntadb="npm run adb"
 alias ntdebug="npm run generate-debug"
-alias test-android="npm run test-android"
-alias buld-android="npm run build-android"
+alias nttest="npm run test-android"
+alias ntbuild="npm run build-android"
 alias gitlab="open -a 'Google Chrome' https://gitlab.com/dashboard/projects "
 alias github="open -a 'Google Chrome' https://github.com/phamdongtruong99"
 alias hooks="open -a 'Google Chrome' https://nikgraf.github.io/react-hooks/?fbclid=IwAR1SR8wMz-pTPIHUM2ORZR4DVmyCf4YmPbGvQfri3gYK0kNoE76EBEWVq_U"
@@ -22,17 +24,37 @@ alias stylenative="open -a 'Google Chrome' https://facebook.github.io/react-nati
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # DOCKER  *********
-alias dockrun="docker run -it "
-alias dockstop="docker stop "
-alias dockup="docker-compose up"
-alias dockdown="docker-compose down"
+alias drun="docker run -it"
+alias dstop="docker stop "
+alias dup="docker-compose up"
+alias ddown="docker-compose down"
+alias dshow="docker images"
 alias dockshow="docker images"
 alias dockdelete="docker image rm "
-alias docksearch="docker search "
-alias dockstatus="docker ps"
-alias dockpull="docker pull "
-alias dockuse="docker attach "
-alias dockexec="docker exec "
+alias dsearch="docker search "
+alias dfuck="docker ps"
+alias dpull="docker pull "
+alias dback="docker attach "
+alias dpass="docker exec "
+alias dshare="docker run -it -v"
+# --- share docker run -it -v LOCAL_PROJECT:/home/data IMAGE_ID # 
+# --- docker run -it -b pathHOst:pathContainer IMAGE_ID --- #
+alias dmit="docker commit"
+alias dexport="docker save --output"
+# docker save --output myImage.tar IMAGE
+alias dimport="docker load -i"
+alias dchangename="docker tag"
+# docker tag IMAGE_ID name:lastest
+#---DOCKER VOLUME ---#
+alias dvlist="docker volume ls"
+alias dvcreate="docker volume create"
+alias dvdelete="docker volume rm"
+alias dvinspeect="doker volume inspect"
+alias drm="docker rm"
+# ubuntu
+alias uup="apt update -y"
+alias ui="apt install"
+
 # NOTE: docker attach NAME(container new created) : using container
 # NOTE: docker exec NAME COMMAND 
 # END DOCKER
@@ -58,4 +80,3 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
