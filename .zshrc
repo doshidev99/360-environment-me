@@ -1,7 +1,8 @@
 export ZSH="/Users/truong.doshi/.oh-my-zsh"
 # ZSH_THEME="robbyrussell"
+# ZSH_THEME="spaceship"
 ZSH_THEME="spaceship"
-plugins=(git)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 # NOTE: REACT-NATIVE  *********
@@ -69,9 +70,15 @@ alias goweb="open 1G-lance/WEB"
 alias gapp="cd 1G-lance/APP ; ls"
 alias goapp="open 1G-lance/APP"
 alias lweb="cd LEARNING/WEB ; ls"
+alias lruby="cd LEARNING/language/ruby ; ls"
 alias loweb="open LEARNING/WEB"
 alias lapp="cd LEARNING/APP ; ls"
 alias loapp="open LEARNING/APP"
+#FPOLY - C#
+alias capp="dotnet new console -o"
+alias fcode="cd oneDriver/c#/LEARNING"
+alias f5="csc Program.cs"
+alias rf5="mono Program.exe"
 # TODO: OPEN FOLDER TASK
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
